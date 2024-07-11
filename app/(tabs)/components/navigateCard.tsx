@@ -8,6 +8,10 @@ import { SearchBarAndroid } from "@rneui/base/dist/SearchBar/SearchBar-android";
 import { AutocompleteDropdown } from 'react-native-autocomplete-dropdown'
 import { useDispatch } from "react-redux";
 import { setDestination } from "../slices/navSlice";
+import NavFavourites from "./navFavourites"
+import { fonts, Icon } from "@rneui/base";
+import { useFonts } from "expo-font";
+
 
 
 const NavigateCard = () => {
@@ -56,7 +60,7 @@ const NavigateCard = () => {
         <SafeAreaView style={tw`bg-white flex-1`}>
             <Text style={tw`text-center py-5 text-xl`}>Good Evening, Ritesh</Text>
             <View style={tw`flex-shrink`}>
-            <View style={tw`py-5 flex flex-col justify-center items-center`}>
+            <View style={tw`pb-5 flex flex-col justify-center items-center`}>
             <AutocompleteDropdown
                     ref={searchRef}
                     controller={(controller : any)=> {
@@ -118,6 +122,19 @@ const NavigateCard = () => {
                       //  showClear={false}
                 />
             </View>
+
+            <NavFavourites/>
+            </View>
+
+            <View style={tw`flex-row justify-evenly py-2 mt-auto`}>
+              <TouchableOpacity style={tw`flex flex-row justify-evenly bg-black w-36 px-4 py-3 rounded-full`}>
+                <Icon name="car" type="font-awesome" color="white" size={24}/>
+                <Text style={tw`font-montserrat text-base text-white text-center`}>Rides</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={tw`flex flex-row justify-evenly w-36 px-4 py-3 rounded-full`}>
+                <Icon name="fast-food-outline" type="ionicon" color="black" size={24}/>
+                <Text style={tw`font-montserrat text-base text-center`}>Eats</Text>
+              </TouchableOpacity>
             </View>
         </SafeAreaView>
         

@@ -6,6 +6,7 @@ import { SearchBarAndroid } from "@rneui/base/dist/SearchBar/SearchBar-android";
 import { AutocompleteDropdown } from 'react-native-autocomplete-dropdown'
 import { useDispatch } from "react-redux";
 import { setDestination, setOrigin } from "../slices/navSlice";
+import NavFavourites from "../components/navFavourites";
 
 const HomeScreen = () => {
     const dispatch = useDispatch();
@@ -123,6 +124,9 @@ const HomeScreen = () => {
                 />
                 
                 <NavOptions/>
+                <NavFavourites
+                  screen="homescreen"
+                />
             </View>
         </SafeAreaView>
         
