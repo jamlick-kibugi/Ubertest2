@@ -23,7 +23,6 @@ const HomeScreen = () => {
     const searchRef = useRef(null)
     const getSuggestions = useCallback(async (q: any) => {
         const filterToken = q.toLowerCase()
-        console.log('getSuggestions', q)
         if (typeof q !== 'string' || q.length < 3) {
           setSuggestionsList(null)
           return
@@ -79,7 +78,6 @@ const HomeScreen = () => {
                             longitude: item.lon,
                             description: item.title
                         }))
-                        console.log("Item selected");
                         dispatch(setDestination(null))
                       }}
                       debounce={600}
@@ -88,7 +86,7 @@ const HomeScreen = () => {
                       //  onSubmit={(e) => onSubmitSearch(e.nativeEvent.text)}
                       onOpenSuggestionsList={onOpenSuggestionsList}
                       loading={loading}
-                      useFilter={false} // set false to prevent rerender twice
+                      useFilter={false}
                       textInputProps={{
                         placeholder: 'Where from mister?',
                         placeholderTextColor: '#000000',

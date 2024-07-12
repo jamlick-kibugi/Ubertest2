@@ -39,14 +39,12 @@ const NavFavourites = (props: any) => {
             renderItem = {({item : {location, destination, icon, latitude, longitude}}) => (
                 <TouchableOpacity style={tw`flex-row items-center p-3`}
                     onPress={() => {
-                        console.log(props.screen)
                         if (props.screen == "homescreen")
                             {dispatch(setOrigin({
                                 latitude: latitude,
                                 longitude: longitude,
                                 description: destination,
                             }))
-                            console.log("done")
                             navigation.navigate("MapScreen")
                         }
                         else

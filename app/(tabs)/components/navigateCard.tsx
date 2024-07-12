@@ -29,7 +29,6 @@ const NavigateCard = () => {
     const searchRef = useRef(null)
     const getSuggestions = useCallback(async (q: any) => {
         const filterToken = q.toLowerCase()
-        console.log('getSuggestions', q)
         if (typeof q !== 'string' || q.length < 3) {
           setSuggestionsList(null)
           return
@@ -54,11 +53,23 @@ const NavigateCard = () => {
       }, [])
     
       const onOpenSuggestionsList = useCallback((isOpened: any) => {}, [])
-    
+
+      const date = new Date().toLocaleString('en-US', {timeZone: 'Asia/Kolkata', hour12: false});
+      const dateArray = date.split(", ");
+      const time = dateArray[1];
+      const hour = Number(time.slice(0, 2))
+      let text = "Morning";
+      if (12 <= hour && hour < 17){
+        text = "Afternoon"
+      } else if (17<= hour && hour < 24) {
+        text = "Evening"
+      } else if (0<= hour && hour < 5){
+        text = "Night"
+      } else {}
 
     return (
         <SafeAreaView style={tw`bg-white flex-1`}>
-            <Text style={tw`text-center py-5 text-xl`}>Good Evening, Ritesh</Text>
+            <Text style={tw`text-center py-5 text-xl`}>Good {text}, Ritesh</Text>
             <View style={tw`flex-shrink`}>
             <View style={tw`pb-5 flex flex-col justify-center items-center`}>
             <AutocompleteDropdown

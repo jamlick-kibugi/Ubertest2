@@ -36,13 +36,10 @@ const RideOptionsCard = () => {
     let travelSpeed = 20;
     let travelTime = Number(parseFloat((distance/travelSpeed).toString()).toFixed(2));
     const days = Math.floor(travelTime/24);
-    console.log(days);
-    console.log(travelTime);
     
     const timeFrac:any = (travelTime - Math.floor(travelTime)).toFixed(2)
     const hours = Math.floor(travelTime%24 || travelTime);
     const mins = Math.floor(timeFrac * 60);
-    console.log(hours);
     
     return (
         <SafeAreaView style={tw`bg-white flex-grow`}>
@@ -50,7 +47,6 @@ const RideOptionsCard = () => {
                 <TouchableOpacity
                 onPress={() => {
                     navigation.navigate("NavigateCard")
-                    console.log("Clicked");
                 }} 
                 style={tw`absolute top-1 left-5 p-3 rounded-full z-1`}
                 >
