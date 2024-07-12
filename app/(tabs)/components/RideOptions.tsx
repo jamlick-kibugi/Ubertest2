@@ -33,17 +33,17 @@ const RideOptionsCard = () => {
     const [selected, setSelected] = useState<String | null>(null);
     const travelDistance = useSelector(selectTravelDistance);
     let distance:any = parseFloat(travelDistance).toFixed(2);
-    console.log(distance);
     let travelSpeed = 20;
     let travelTime = Number(parseFloat((distance/travelSpeed).toString()).toFixed(2));
-    console.log((travelTime));
+    const days = Math.floor(travelTime/24);
+    console.log(days);
+    console.log(travelTime);
+    
     const timeFrac:any = (travelTime - Math.floor(travelTime)).toFixed(2)
-    const hours = Math.floor(travelTime);
+    const hours = Math.floor(travelTime%24 || travelTime);
     const mins = Math.floor(timeFrac * 60);
     console.log(hours);
-    console.log(mins);
     
-    console.log(travelDistance);
     return (
         <SafeAreaView style={tw`bg-white flex-grow`}>
             <View>
@@ -77,7 +77,7 @@ const RideOptionsCard = () => {
                         />
                         <View style={tw`-ml-3`}>
                             <Text style={tw`text-xl font-montserrat`}>{title}</Text>
-                            <Text>{ hours + " hours" || ""} {mins} mins Travel time</Text>
+                            <Text>{ days ? days + " days" : ""} { hours ? hours + " hours" : ""} {days ? "" : mins + " mins"} Travel time</Text>
                         </View>
                         <Text style={tw`text-xl`}>₹{(parseFloat(((299+distance*9.5)*Number(item.multiplier)).toString()).toFixed(2))}</Text>
                     </TouchableOpacity>

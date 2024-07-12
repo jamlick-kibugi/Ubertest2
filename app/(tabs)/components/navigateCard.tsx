@@ -79,7 +79,7 @@ const NavigateCard = () => {
                             longitude: item.lon,
                             description: item.title
                         }))
-                        item && navigation.navigate("RideOptionsCard")
+                        //item && navigation.navigate("RideOptionsCard")
                       }}
                       debounce={600}
                       suggestionsListMaxHeight={Dimensions.get('window').height * 0.4}
@@ -127,7 +127,9 @@ const NavigateCard = () => {
             </View>
 
             <View style={tw`flex-row justify-evenly py-2 mt-auto`}>
-              <TouchableOpacity style={tw`flex flex-row justify-evenly bg-black w-36 px-4 py-3 rounded-full`}>
+              <TouchableOpacity 
+              onPress={() => navigation.navigate("RideOptionsCard")}
+              style={tw`flex flex-row justify-evenly bg-black w-36 px-4 py-3 rounded-full`}>
                 <Icon name="car" type="font-awesome" color="white" size={24}/>
                 <Text style={tw`font-montserrat text-base text-white text-center`}>Rides</Text>
               </TouchableOpacity>
