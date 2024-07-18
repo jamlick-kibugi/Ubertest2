@@ -88,7 +88,7 @@ const HomeScreen = () => {
                       loading={loading}
                       useFilter={false}
                       textInputProps={{
-                        placeholder: 'Where from mister?',
+                        placeholder: 'Enter pickup location',
                         placeholderTextColor: '#000000',
                         autoCorrect: false,
                         autoCapitalize: 'none',

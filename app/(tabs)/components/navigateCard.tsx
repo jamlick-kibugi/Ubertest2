@@ -100,7 +100,7 @@ const NavigateCard = () => {
                       loading={loading}
                       useFilter={false} // set false to prevent rerender twice
                       textInputProps={{
-                        placeholder: 'Where to mister?',
+                        placeholder: 'Enter drop location',
                         placeholderTextColor: '#a6a6a6',
                         autoCorrect: false,
                         autoCapitalize: 'none',
