@@ -1,4 +1,4 @@
-# Uber-Clone
+# PI RIDE
 <a><img align = "center" src = "https://i.imgur.com/bB8Jcmo.png" width = "50px"></a>
 <a><img align = "center" src = "https://i.imgur.com/dq2JVwT.png" width = "50px"></a>
 <a><img align = "center" src = "https://i.imgur.com/eYtLGWn.png" width = "50px"></a>
@@ -20,8 +20,8 @@ npm start
 
 You can use an emulator on your pc to use the app or scan the QR code using your Android/iOS device to use it there as well
 
-![alt text](assets/images/screenshots/uber1.png)
+![alt text](assets/images/screenshots/piride1.png)
 
 The user can also select a pick-up location as well as a drop-location from a list of cities, towns, counties, districts etc. from the searchbar having options which have been implemented using OpenStreetMap API. The UI of the mapscreen displays a map which has been implemented using `react-native-maps` package. The uber app uses other react utilities as well.
 
-![alt text](assets/images/screenshots/uber2.png)
+![alt text](assets/images/screenshots/piride2.png)
