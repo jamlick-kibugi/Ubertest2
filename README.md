@@ -1,4 +1,4 @@
-# Uber-Clone
+# PI RIDE
 <a><img align = "center" src = "https://i.imgur.com/bB8Jcmo.png" width = "50px"></a>
 <a><img align = "center" src = "https://i.imgur.com/dq2JVwT.png" width = "50px"></a>
 <a><img align = "center" src = "https://i.imgur.com/eYtLGWn.png" width = "50px"></a>
