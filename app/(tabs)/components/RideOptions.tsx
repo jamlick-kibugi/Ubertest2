@@ -10,19 +10,19 @@ import { selectTravelDistance } from "../slices/navSlice";
 const data = [
     {
         id: "1",
-        title: "UberX",
+        title: "TaxipiX",
         multiplier: 1,
         image: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_558,h_372/v1682350380/assets/2f/29d010-64eb-47ac-b6bb-97503a838259/original/UberX-%281%29.png"
     },
     {
         id: "2",
-        title: "UberXL",
+        title: "TaxipiXL",
         multiplier: 1.25,
         image: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_558,h_372/v1688558287/assets/b9/29074f-ab5d-4459-84d4-953d75430d2a/original/UberXL.png"
     },
     {
         id: "3",
-        title: "Uber LUX",
+        title: "Taxi Pi LUX",
         multiplier: 1.75,
         image: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_558,h_372/v1682350114/assets/c2/296eac-574a-4a81-a787-8a0387970755/original/UberBlackXL.png"
     }
